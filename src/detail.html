@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&amp;display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/806ac7a0a4.js" crossorigin="anonymous" defer></script>
+    <title>FEM | REST Countries</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/detail.js" defer> </script>
+  </head>
+  <body class="bg-lm-bg dark:bg-dm-bg">
+    <header class="sticky top-0 z-40 shadow-md bg-lm-secondary dark:bg-dm-secondary">
+      <div class="flex items-center justify-between px-6 py-6 mx-auto max-w-7xl">
+        <h1 class="text-2xl font-extrabold dark:text-white">Where in the world?</h1>
+        <div><i class="fa fa-moon dark:text-white" id="theme-icon"></i><span class="ml-2 cursor-pointer text-lm-text dark:text-dm-text hover:text-green-500" id="theme-toggle">Dark mode</span></div>
+      </div>
+    </header>
+    <main class="p-8 mx-auto max-w-7xl "> 
+      <div><a class="inline-flex items-center px-8 py-1 transform bg-white rounded-md shadow-around text-lm-text dark:bg-dm-secondary dark:text-dm-text hover:scale-105 " href="/"> <span class="text-xl font-bold">&#x2190;</span><span class="ml-2">Back</span></a></div>
+      <div class="grid grid-cols-1 gap-6 mt-16 md:grid-cols-2 md:gap-24 lg:gap-28">
+        <div class="h-64 md:h-96"><img class="object-cover w-full h-full" alt="country-flag" src="" id="flag-img"></div>
+        <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <p class="text-xl font-extrabold col-span-full dark:text-white" id="country-name"></p>
+          <div class="flex flex-col space-y-2">
+            <p><span class="mr-2 font-bold text-lm-text dark:text-white">Native Name:</span><span class="text-gray-700 dark:text-gray-100" id="native"> </span></p>
+            <p><span class="mr-2 font-bold text-lm-text dark:text-white">Population:</span><span class="text-gray-700 dark:text-gray-100" id="population"> </span></p>
+            <p><span class="mr-2 font-bold text-lm-text dark:text-white">Region:</span><span class="text-gray-700 dark:text-gray-100" id="region"> </span></p>
+            <p><span class="mr-2 font-bold text-lm-text dark:text-white">Sub Region:</span><span class="text-gray-700 dark:text-gray-100" id="sub-region"> </span></p>
+            <p><span class="mr-2 font-bold text-lm-text dark:text-white">Capital:</span><span class="text-gray-700 dark:text-gray-100" id="capital">  </span></p>
+          </div>
+          <div class="flex flex-col space-y-2">
+            <p><span class="mr-2 font-bold text-lm-text dark:text-white">Top Level Domain:</span><span class="text-gray-700 dark:text-gray-100" id="domain"> </span></p>
+            <p><span class="mr-2 font-bold text-lm-text dark:text-white">Currencies:</span><span class="text-gray-700 dark:text-gray-100" id="currency"> </span></p>
+            <p><span class="mr-2 font-bold text-lm-text dark:text-white">languages:</span><span class="text-gray-700 dark:text-gray-100" id="languages"> </span></p>
+          </div>
+          <div class="col-span-full">
+            <p class="text-xl font-extrabold dark:text-white">Border Countries </p>
+            <div class="flex flex-wrap gap-3 mt-3" id="neighbours"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

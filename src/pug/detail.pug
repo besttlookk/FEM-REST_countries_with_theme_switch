@@ -1,0 +1,60 @@
+extends templates/layout  
+
+block head 
+    title FEM | REST Countries
+    link(rel="stylesheet", href="./css/style.css")
+    script(src="./js/detail.js" defer) 
+
+block main
+  main(class="p-8 mx-auto max-w-7xl ") 
+    //- back button_container
+    div(class="")
+      a(class="inline-flex items-center px-8 py-1 transform bg-white rounded-md shadow-around text-lm-text dark:bg-dm-secondary dark:text-dm-text hover:scale-105 " href="/") 
+        span(class="text-xl font-bold") &#x2190;
+        span(class="ml-2") Back
+
+    //- container 
+    div(class="grid grid-cols-1 gap-6 mt-16 md:grid-cols-2 md:gap-24 lg:gap-28")
+      //- image-container
+      div(class="h-64 md:h-96")
+        img(alt="country-flag" src="" id="flag-img" class="object-cover w-full h-full")
+      
+      //- content-container
+      div(class="grid grid-cols-1 gap-6 md:grid-cols-2")
+        //- country name
+        p(class="text-xl font-extrabold col-span-full dark:text-white" id="country-name")
+        //- detail box 1
+        div(class="flex flex-col space-y-2")
+          p(class="")
+            span(class="mr-2 font-bold text-lm-text dark:text-white") Native Name:
+            span(class="text-gray-700 dark:text-gray-100" id="native") 
+          p(class="")
+            span(class="mr-2 font-bold text-lm-text dark:text-white") Population:
+            span(class="text-gray-700 dark:text-gray-100" id="population") 
+          p(class="")
+            span(class="mr-2 font-bold text-lm-text dark:text-white") Region:
+            span(class="text-gray-700 dark:text-gray-100" id="region") 
+          p(class="")
+            span(class="mr-2 font-bold text-lm-text dark:text-white") Sub Region:
+            span(class="text-gray-700 dark:text-gray-100" id="sub-region") 
+          p(class="")
+            span(class="mr-2 font-bold text-lm-text dark:text-white") Capital:
+            span(class="text-gray-700 dark:text-gray-100" id="capital")   
+        
+        //- detail box 2
+        div(class="flex flex-col space-y-2")
+          p(class="")
+            span(class="mr-2 font-bold text-lm-text dark:text-white") Top Level Domain:
+            span(class="text-gray-700 dark:text-gray-100" id="domain") 
+          p(class="")
+            span(class="mr-2 font-bold text-lm-text dark:text-white") Currencies:
+            span(class="text-gray-700 dark:text-gray-100" id="currency") 
+          p(class="")
+            span(class="mr-2 font-bold text-lm-text dark:text-white") languages:
+            span(class="text-gray-700 dark:text-gray-100" id="languages") 
+
+        //- detail box 3
+        div(class="col-span-full")
+          p(class="text-xl font-extrabold dark:text-white") Border Countries 
+          //- list- of -countries container
+          div(class="flex flex-wrap gap-3 mt-3" id="neighbours" )

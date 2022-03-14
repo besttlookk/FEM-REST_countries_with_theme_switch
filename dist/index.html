@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&amp;display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/806ac7a0a4.js" crossorigin="anonymous" defer></script>
+    <title>FEM | REST Countries</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer> </script>
+  </head>
+  <body class="bg-lm-bg dark:bg-dm-bg">
+    <header class="sticky top-0 z-40 shadow-md bg-lm-secondary dark:bg-dm-secondary">
+      <div class="flex items-center justify-between px-6 py-6 mx-auto max-w-7xl">
+        <h1 class="text-2xl font-extrabold dark:text-white">Where in the world?</h1>
+        <div><i class="fa fa-moon dark:text-white" id="theme-icon"></i><span class="ml-2 cursor-pointer text-lm-text dark:text-dm-text hover:text-green-500" id="theme-toggle">Dark mode</span></div>
+      </div>
+    </header>
+    <main class="p-6 mx-auto max-w-7xl "> 
+      <div class="flex flex-col space-y-4 md:flex-row md:justify-between md:items-center md:space-y-0">
+        <form class="relative w-full overflow-hidden border-green-400 rounded-lg h-14 border-3 shadow-around md:w-96" id="form"><i class="fas fa-magnifying-glass absolute text-xl text-gray-400 transform top-2/4 left-10 -translate-y-2/4"></i>
+          <input class="inline-block w-full h-full py-2 pl-24 pr-4 outline-none dark:bg-dm-secondary" type="text" name="input" id="input" placeholder="Search for a country...">
+        </form>
+        <div class="filter h-14">
+          <div class="filter__field dark:bg-dm-secondary dark:text-white" id="filter-field">
+            <p class="filter__text" id="filter-text">Filter by Region </p><i class="fa fa-angle-down dark:text-white" id="caret"></i>
+          </div>
+          <ul class="filter__list dark:bg-dm-secondary dark:text-white" id="filter-list">
+            <li class="filter__option">All</li>
+            <li class="filter__option">Africa</li>
+            <li class="filter__option">America</li>
+            <li class="filter__option">Asia</li>
+            <li class="filter__option">Europe</li>
+            <li class="filter__option">Oceania</li>
+          </ul>
+        </div>
+      </div>
+      <section class="p-10 md:px-0">
+        <div class="grid grid-cols-1 gap-12 card-container sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" id="card-container"></div>
+      </section>
+    </main>
+  </body>
+</html>
